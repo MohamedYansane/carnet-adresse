@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/RepertoireService.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/RepertoireService.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfcontact">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="contact" nillable="true" type="tns:contact" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfcontact" nillable="true" type="tns:ArrayOfcontact" />
+  <xs:complexType name="contact">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="csp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idContact" type="xs:int" />
+      <xs:element minOccurs="0" name="nom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="prenom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sexe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ville" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="contact" nillable="true" type="tns:contact" />
+  <xs:complexType name="numtel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NumeroTel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idContact" type="xs:int" />
+      <xs:element minOccurs="0" name="idNumTel" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="numtel" nillable="true" type="tns:numtel" />
+  <xs:complexType name="ArrayOfnumtel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="numtel" nillable="true" type="tns:numtel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfnumtel" nillable="true" type="tns:ArrayOfnumtel" />
+</xs:schema>

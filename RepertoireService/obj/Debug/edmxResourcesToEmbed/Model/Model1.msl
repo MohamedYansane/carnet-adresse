@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="carnetadresseModelStoreContainer" CdmEntityContainer="carnetadresseEntities">
+    <EntitySetMapping Name="contact">
+      <EntityTypeMapping TypeName="carnetadresseModel.contact">
+        <MappingFragment StoreEntitySet="contact">
+          <ScalarProperty Name="idContact" ColumnName="idContact" />
+          <ScalarProperty Name="nom" ColumnName="nom" />
+          <ScalarProperty Name="prenom" ColumnName="prenom" />
+          <ScalarProperty Name="csp" ColumnName="csp" />
+          <ScalarProperty Name="sexe" ColumnName="sexe" />
+          <ScalarProperty Name="ville" ColumnName="ville" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="numtel">
+      <EntityTypeMapping TypeName="carnetadresseModel.numtel">
+        <MappingFragment StoreEntitySet="numtel">
+          <ScalarProperty Name="idNumTel" ColumnName="idNumTel" />
+          <ScalarProperty Name="idContact" ColumnName="idContact" />
+          <ScalarProperty Name="NumeroTel" ColumnName="NumeroTel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
